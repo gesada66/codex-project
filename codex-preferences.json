@@ -1,0 +1,12 @@
+{
+  "tasks": {
+    "timestamp": true,
+    "file": "neurostack/TASKS.md",
+    "includeFileRefs": true,
+    "updateOn": [
+      "taskCompleted",
+      "milestoneReached"
+    ],
+    "enforceUpdates": true
+  }
+}

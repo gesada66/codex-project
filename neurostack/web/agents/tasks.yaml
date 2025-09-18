@@ -1,0 +1,16 @@
+# Placeholder tasks file for parallel agent execution (mock)
+# A real coordinator would read this and spawn agents accordingly.
+tasks:
+  - id: T-1
+    agent: APIAgent
+    payload:
+      action: parse
+      file: example.pdf
+  - id: T-2
+    agent: IndexAgent
+    payload:
+      rebuild: true
+  - id: T-3
+    agent: ChatAgent
+    payload:
+      query: "What is coverage limit?"

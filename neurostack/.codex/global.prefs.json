@@ -1,0 +1,34 @@
+{
+  "publicRepo": true,
+  "secretHygiene": {
+    "gitignoreEnv": true,
+    "ciSecretScan": true,
+    "docs": "docs/SECURITY.md"
+  },
+  "mcpPreflight": {
+    "required": true,
+    "servers": ["playwright"],
+    "workingDirectory": "web",
+    "testCommand": "npm run test:e2e",
+    "fixtures": ["sample-pdf", "web/tests/fixtures/pdfs"],
+    "envHints": ["SAMPLES_PDF_DIR"]
+  },
+  "ciPolicy": {
+    "prOnly": true,
+    "e2eGate": "RUN_E2E || branch e2e/* || *-e2e"
+  },
+  "containers": {
+    "preferCloudBuilds": true,
+    "prebuiltImageOption": true,
+    "docs": "docs/CONTAINERS.md",
+    "scripts": [
+      "scripts/build-image.sh",
+      "scripts/build-image.ps1"
+    ]
+  },
+  "responseSummary": {
+    "required": true,
+    "sectionTitle": "Summary",
+    "maxBullets": 5
+  }
+}

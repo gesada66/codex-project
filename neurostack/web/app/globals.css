@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0B0F0C;
+  --surface: #1A2320;
+  --surface-600: #26332f;
+  --accent: #10B981;
+  --accent-100: #a7f3d0;
+  --warning: #F59E0B;
+  --text: #F9FAFB;
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* CSS vars mapped to utility-like classes for convenience */
+.bg-surface { background-color: var(--surface); }
+.border-surface-600\/40 { border-color: color-mix(in oklab, var(--surface-600) 40%, transparent); }
+.text-text { color: var(--text); }
+.text-text\/70 { color: color-mix(in oklab, var(--text) 70%, transparent); }
+.text-text\/80 { color: color-mix(in oklab, var(--text) 80%, transparent); }
+.text-text\/40 { color: color-mix(in oklab, var(--text) 40%, transparent); }
+.text-accent-100 { color: var(--accent-100); }
+.bg-accent\/20 { background-color: color-mix(in oklab, var(--accent) 20%, transparent); }
+.text-accent { color: var(--accent); }
+.bg-accent { background-color: var(--accent); }
+.ring-accent { --tw-ring-color: var(--accent); }
+.bg-surface-600\/20 { background-color: color-mix(in oklab, var(--surface-600) 20%, transparent); }
+
+/* Basic resets */
+* { box-sizing: border-box; }
+a { text-decoration: none; }
+
+/* Utility helpers not in tailwind v4 default */
+.card { background: var(--surface); border: 1px solid color-mix(in oklab, var(--surface-600) 40%, transparent); border-radius: 0.5rem; }
+.card-header { padding: 0.75rem 1rem; border-bottom: 1px solid color-mix(in oklab, var(--surface-600) 40%, transparent); font-weight: 600; }
+.card-content { padding: 1rem; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .5rem .75rem; font-size: .875rem; border-radius: .375rem; border: 1px solid transparent; }
+.btn-primary { background: var(--accent); color: #062b1f; }
+.btn-outline { background: transparent; color: var(--text); border-color: color-mix(in oklab, var(--surface-600) 40%, transparent); }
+.input { background: #0f1613; border: 1px solid color-mix(in oklab, var(--surface-600) 40%, transparent); color: var(--text); border-radius: .375rem; padding: .5rem .625rem; }
+.label { font-size: .75rem; color: color-mix(in oklab, var(--text) 60%, transparent); }
+
+/* Table */
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: .5rem .75rem; border-bottom: 1px solid color-mix(in oklab, var(--surface-600) 25%, transparent); text-align: left; }
+th { font-size: .75rem; text-transform: uppercase; letter-spacing: .04em; color: color-mix(in oklab, var(--text) 65%, transparent); }
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}

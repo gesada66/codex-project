@@ -1,0 +1,41 @@
+# Global ignores to keep secrets and local artifacts out of the repo
+
+# Env files (keep only *.example tracked)
+.env
+.env.*
+!.env.example
+
+web/.env
+web/.env.*
+!web/.env.example
+
+# Private keys / certs
+*.pem
+*.key
+id_rsa
+id_dsa
+
+# Local datasets and PDFs (avoid committing real documents)
+sample-pdf/*
+!sample-pdf/.gitkeep
+web/tests/fixtures/pdfs/
+
+# Node / Next.js / build outputs
+node_modules/
+web/node_modules/
+.next/
+web/.next/
+.turbo/
+dist/
+build/
+coverage/
+
+# Playwright artifacts
+web/test-results/
+web/playwright-report/
+web/.playwright/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.log

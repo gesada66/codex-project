@@ -1,0 +1,45 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "--yes",
+        "@playwright/mcp@latest"
+      ],
+      "env": {}
+    },
+    "shadcn-official": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "shadcn@canary",
+        "registry:mcp"
+      ],
+      "env": {}
+    },
+    "shadcn-enhanced": {
+      "command": "npx",
+      "args": [
+        "@jpisnice/shadcn-ui-mcp-server"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "xxxxxxxxxxxxxxxxx"
+      }
+    },
+    "shadcn-blocks": {
+      "command": "npx",
+      "args": [
+        "@heilgar/shadcn-ui-mcp-server"
+      ],
+      "env": {}
+    },
+    "langchain_mcp": {
+      "command": "python",
+      "args": [
+        "-u",
+        "C:\\\\Users\\\\georg\\\\.codex\\\\math_server.py"
+      ],
+      "env": {}
+    }
+  }
+}
